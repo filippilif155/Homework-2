@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    background-color: #060b2b;
+    color: rgba(255, 255, 255, 0.671);
+}
+
+h1{
+    text-align: center;
+    font-size: 4vw;
+}
+
+.container{
+    position: relative;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    height: 45vw;
+}
+
+.main-pic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 80%;
+    animation: fade 1s;
+}
+
+@keyframes fade{
+    from {opacity: 0.2} 
+    to {opacity: 1}
+}
+
+.main-pic-zoom{
+    width: 90%;
+    height: 90%;
+}
+
+.arrows{
+    position: absolute;
+    top: 14vw;
+    height: 8vw;
+    width: 8vw;
+    z-index: 1;
+}
+
+.arrow-back-zoom{
+    left: 7vw;
+}
+
+.arrow-next-zoom{
+    right: 7vw;
+}
+
+.arrow-back{
+    left: 12vw;
+}
+.arrow-next{
+    right: 12vw;
+}
