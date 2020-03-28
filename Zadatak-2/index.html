@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    <title>X/O</title>
+</head>
+<body>
+    <div class="result">
+
+        <span id="result-x">X - 0</span>
+        <span id="result-o">O - 0</span>
+        
+    </div>
+
+    <input type="button" value="RESTART" class="btn" onclick="clearTable()">
+
+    <input type="button" value="RESET" class="btn btn2" onclick="clearTableAndScore()">
+
+    <table id="table">
+
+        <tr class="row" id="row-1">
+            <td class="cell" id="cell-11"></td>
+            <td class="cell" id="cell-12"></td>
+            <td class="cell" id="cell-13"></td>
+        </tr>
+
+        <tr class="row" id="row-2">
+            <td class="cell" id="cell-21"></td>
+            <td class="cell" id="cell-22"></td>
+            <td class="cell" id="cell-23"></td>
+        </tr>
+
+        <tr class="row" id="row-3">
+            <td class="cell" id="cell-31"></td>
+            <td class="cell" id="cell-32"></td>
+            <td class="cell" id="cell-33"></td>
+        </tr>
+
+    </table>
+    <div id="line"></div>
+
+    <div id="x-won">X</div>
+    <div id="o-won">O</div>
+
+    <script src="custom.js"></script>
+</body>
+</html>
