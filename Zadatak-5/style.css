@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    font-family: 'Baloo 2', cursive;
+    font-size: 3vw;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 4vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    box-sizing: border-box;
+    width: 100%;
+    height: 5vw;
+}
+
+.box{
+    width: 100%;
+    background-color: blue;
+    color: white;
+    border: 1px solid rgb(170, 145, 145);
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 1vw;
+}
+
+.box:hover, .selected-option{
+    background-color: rgba(0, 0, 255, 0.75);
+
+}
+
+
+
+.time{
+    margin-top: 3vw;
+    padding-left: 40vw;
+    font-size: 12vw;
+    font-weight: 600;
+}
+
+.buttons{
+    margin-top: 3vw;
+    padding-left: 13vw;
+}
+
+.btn{
+    height: 8vw;
+    width: 18vw;
+    margin-left: 6.8vw;
+    border-radius: 1vw;
+    outline: none;
+    color: white;
+    font-size: 3vw;
+    cursor: pointer;
+
+}
+
+#btn1{
+    background-color: green;
+}
+#btn2{
+    background-color: red;
+}
+#btn3{
+    color: black;
+
+}
