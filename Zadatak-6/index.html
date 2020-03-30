@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
     <title>Calculator</title>
 </head>
 <body>
 
-    <table cellspacing = "20">
+    <table>
         <tr>
             <td><button>C</button></td>
-            <td colspan="3"><input type="text" name="" id=""></td>
+            <td colspan="3"><input type="text" id="input" onfocusout="solveInput()"></td>
         </tr>
 
         <tr>
@@ -44,5 +45,7 @@
 
     </table>
     
+    <script src="custom.js"></script>
+
 </body>
 </html>
