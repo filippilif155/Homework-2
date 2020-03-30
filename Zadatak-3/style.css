@@ -20,28 +20,29 @@ h1{
 
 .flex-box{
     position: relative;
-    width: 20vw;
+    width: 10vw;
     height: 10vw;
-    
-    padding-left: 2vw;
+    padding-left: 3vw;
     margin-top: 3vw;
 }
 
 
 .text{
-    width: 15vw;
+    width: 10vw;
     height: 10vw;
-    font-size: 3vw;
-    color: white;
+    font-size: 5vw;
+    text-align: center;
+    color: #42d7ee;
+    opacity: 0.5;
 }
 
 .btn{
     position: absolute;
-    top:-2vw;
-    right: 2.5vw;
-    height: 6vw;
-    width: 6vw;
-    font-size: 2.6vw;
+    top: -1vw;
+    right: -1.5vw;
+    height: 3vw;
+    width: 3vw;
+    font-size: 1.5vw;
     text-align: center;
     border-radius: 10vw;
     outline: none;
@@ -92,4 +93,17 @@ h1{
 
 #color-box3{
     background-color: rgb(210, 109, 109);
+}
+
+.result{
+    position: fixed;
+    top: 1vw;
+    left: 1vw;
+    text-align: center;
+    line-height: 8vw;
+    font-size: 1.8vw;
+    border: 0.2vw solid white;
+    width: 8vw;
+    height: 8vw;
+
 }

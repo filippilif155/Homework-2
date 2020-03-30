@@ -1,9 +1,10 @@
 
-var numOfBoxes = prompt("How many palindromes do you want to check?");
+var numOfBoxes = prompt("How many characters do you want to check?");
+
 
 while(isNaN(parseInt(numOfBoxes))){
 
-    numOfBoxes = prompt("Wrong input! How many palindromes do you want to check?");
+    numOfBoxes = prompt("Wrong input! How many characters do you want to check?");
     
 }
 
@@ -12,6 +13,7 @@ while(numOfBoxes >= 0){
     numOfBoxes--;
 }
 
+const result = document.getElementById("result");
 
 var listToRemove = document.getElementById("container");
 
@@ -30,6 +32,7 @@ function addBox(){
 
         let newInput = document.createElement("input"); 
         newInput.setAttribute("type", "text");
+        newInput.maxLength = 1;
         newInput.className = "text";
 
         let newButton = document.createElement("button");
@@ -98,22 +101,39 @@ function isPalindrome(str){
 
 function Palindrome(event){
     var RegExpression = /^[a-zA-Z\s]*$/; 
+    let str = "";
+    
+    
     
     if(event.target.value === ""){
         event.target.style.backgroundColor = "white";
-        console.log(event.target.style.backgroundColor);
+        event.target.style.opacity = "0.5";
     }
-    else if(RegExpression.test(event.target.value)){
-        if(isPalindrome(event.target.value)){
-            event.target.style.backgroundColor = "rgba(36, 173, 36, 0.678)";
+    else if(!RegExpression.test(event.target.value)){
+        event.target.style.backgroundColor = "rgb(210, 109, 109)";
+        
+        event.target.style.opacity = "1";
+        result.style.backgroundColor = "rgb(189, 216, 93)";
+        
+    }
+    else{
+        
+        event.target.style.opacity = "1";
+        let arr = listToRemove.children;
+        
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i].firstElementChild.value !== "" & arr[i].firstElementChild.value !== " "){
+                str = str + arr[i].firstElementChild.value;
+            }
+        }
+        if(isPalindrome(str)){
+            result.style.backgroundColor = "rgba(36, 173, 36, 0.678)";
         }
         else{
-            event.target.style.backgroundColor = "rgb(189, 216, 93)";
+            result.style.backgroundColor = "rgb(189, 216, 93)";
         }
 
     }
-    else{
-        event.target.style.backgroundColor = "rgb(210, 109, 109)"
-    }
+        
     
 }
