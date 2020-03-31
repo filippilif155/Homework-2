@@ -12,6 +12,18 @@ itemList.addEventListener("click", removeItem);
 
 listSearch.addEventListener("click", toSearch);
 
+searchBox.addEventListener("focus", () =>{
+    listSearch.style.display = "block";
+})
+
+searchBox.addEventListener("focusout", () =>{
+    let x = setInterval(() => {
+    
+    listSearch.style.display = "none";
+    clearInterval(x);
+},200)
+})
+
 
 window.addEventListener("beforeunload", function(e){
     localStorage.setItem("items", localStorageList);
